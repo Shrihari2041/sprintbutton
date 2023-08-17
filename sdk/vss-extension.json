@@ -1,0 +1,46 @@
+{
+    "manifestVersion": 1,
+    "id": "sprint-button-extension",
+    "publisher": "ShriHariM",
+    "version": "1.0.7",
+    "name": "Sprint Button Extension",
+    "description": "A sample Visual Studio Services extension",
+    "public": false,
+    "categories": ["Azure Boards"],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "icons": {
+        "default": "images/logo.png"
+     },
+    "contributions": [
+        {
+            "id": "my-hub",
+            "type": "ms.vss-web.hub",
+            "targets": [
+                "ms.vss-work-web.work-hub-group"
+            ],
+            "properties": {
+                "name": "Hello",
+                "order": 99,
+                "uri": "hello-world.html"
+            }
+        }
+    ],
+    "scopes": [
+        "vso.work"
+    ],
+    "files": [
+        {
+            "path": "hello-world.html", "addressable": true
+        },
+        {
+            "path": "scripts", "addressable": true
+        },
+        {
+            "path": "images/logo.png", "addressable": true
+        }
+    ]
+}
